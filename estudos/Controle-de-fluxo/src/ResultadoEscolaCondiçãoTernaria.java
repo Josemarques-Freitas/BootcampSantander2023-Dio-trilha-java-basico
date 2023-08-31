@@ -11,7 +11,6 @@ public class ResultadoEscolaCondiçãoTernaria {
          *   ? "Aprovado" : variavel >=numero && variavel <numeroMedia ? "Recuperação" : "Reprovado";
          *    representa else if = Se por acaso ou entre */
         
-
          
     }
 }
