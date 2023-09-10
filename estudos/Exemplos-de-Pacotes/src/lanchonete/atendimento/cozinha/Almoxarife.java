@@ -1,19 +1,24 @@
 package lanchonete.atendimento.cozinha;
+
 public class Almoxarife {
-    public void controlarEntrada() {
+    // Modificado com o private para que só Almoxarife veja essa ação.
+    /* public */private void controlarEntrada() {
         System.out.println("CONTROLANDO A ENTRADA DOS ITENS");
     }
 
-    public void controlarSaida() {
+    // Modificado com o private para que só Almoxarife veja essa ação.
+    /* public */private void controlarSaida() {
         System.out.println("CONTROLANDO A SAIDA DOS ITENS");
     }
 
-    public void entregarIngredientes() {
+    // Modificado com o Default para que Cozinheiro e Almoxarife veja essa ação.
+    /* public */ void entregarIngredientes() {
         System.out.println("ENTREGANDO INGREDIENTES");
         // ...?
     }
 
-    public void trocarGas() {
+    // Modificado com o Default para que Cozinheiro e Almoxarife veja essa ação.
+    /* public */ void trocarGas() {
         System.out.println("ALMOXARIFE TROCANDO O GÁS");
     }
 }
