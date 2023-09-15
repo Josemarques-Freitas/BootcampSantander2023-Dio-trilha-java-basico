@@ -1,4 +1,4 @@
-package Main.java.OperacoesBasicas;
+package Main.java.List.OperacoesBasicas;
 
 public class Tarefa {
 

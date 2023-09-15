@@ -1,9 +1,8 @@
-package Main.java.Ordenação;
+package Main.java.List.Ordenação;
 
 import java.util.Comparator;
 
-//Adicionando a implementação Comparable com generico <TIPO DO GENERICO Q NO CASO É O NOME DA CLASSE> Obs: o compareblo é para comparar Int e String.
-class Pessoa implements Comparable<Pessoa> {
+public class Pessoa implements Comparable<Pessoa> {
 
     private String nome;
     private int idade;
