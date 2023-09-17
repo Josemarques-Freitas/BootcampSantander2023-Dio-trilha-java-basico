@@ -1,6 +1,5 @@
 package Main.java.Map.Ordenação;
 
-import java.security.NoSuchAlgorithmException;
 import java.util.*;
 
 public class LivrariaOnline {
