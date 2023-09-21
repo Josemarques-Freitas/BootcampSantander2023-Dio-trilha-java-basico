@@ -1,6 +1,12 @@
 ## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+> Olá pessoal sejam-bem vindos aqui no meu GitHub, aqui vc vai encontrar como fiz meu diagrama e os Códigos Fontes do projeto teste Iphone do Curso Java Backe-End da DIO em parceiria com o Santander Universidades.
+Sou novo na aréa de programção e espero te absorvido bem o conteúdo ministrado pelos nossos professores até aqui, e ter acertado na proposta q eles deram. Vamos que vamos e até a próxima! 🙏📚🚀
+
+
+
+
+![DiagramaIphone](https://github.com/Josemarques-Freitas/Dio-trilha-java-basico/assets/81983667/73aabc59-4875-421e-9c64-d89d300c3e4b)
 
 ## Folder Structure
 
@@ -11,7 +17,6 @@ The workspace contains two folders by default, where:
 
 Meanwhile, the compiled output files will be generated in the `bin` folder by default.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
 
 ## Dependency Management
 
