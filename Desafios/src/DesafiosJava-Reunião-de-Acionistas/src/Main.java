@@ -1,13 +1,14 @@
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.text.SimpleDateFormat;
+import java.text.ParseException;
 import java.util.List;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) throws ParseException {
+        // Lê os dados de Entrada conforme descrito neste Desafio.
         Scanner scanner = new Scanner(System.in);
         String dataInicial = scanner.nextLine();
         String dataFinal = scanner.nextLine();
@@ -22,12 +23,12 @@ public class Main {
 }
 
 class SistemaAcionistas {
-
     public List<String> obterAnalisesDesempenho(String dataInicialStr, String dataFinalStr) throws ParseException {
         SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
         Date dataInicial = df.parse(dataInicialStr);
         Date dataFinal = df.parse(dataFinalStr);
 
+        // Simula uma base de dados em uma lista de análises:
         List<Analise> analises = new ArrayList<>();
         analises.add(new Analise(df.parse("01/01/2023"), "Analise de Desempenho Financeiro"));
         analises.add(new Analise(df.parse("15/02/2023"), "Analise de Riscos e Exposicoes"));
@@ -36,33 +37,34 @@ class SistemaAcionistas {
         analises.add(new Analise(df.parse("15/05/2023"), "Analise de Ativos"));
         analises.add(new Analise(df.parse("30/06/2023"), "Analise de Inovacao e Tecnologia"));
 
-        // Filtra as análises dentro do período especificado
-        List<String> analisesFiltradas = new ArrayList<>();
+        List<String> analisesNoPeriodo = new ArrayList<>();
+
         for (Analise analise : analises) {
             Date dataAnalise = analise.getData();
-            if (analise.getData().after(dataInicial) && analise.getData().before(dataFinal)) {
-                analisesFiltradas.add(analise.getDescricao());
+
+            if (dataAnalise.equals(dataInicial) || dataAnalise.after(dataInicial) && dataAnalise.before(dataFinal)) {
+                analisesNoPeriodo.add(analise.getDescricao());
             }
         }
 
-        return analisesFiltradas;
-    }
-}
-
-class Analise {
-    private Date data;
-    private String descricao;
-
-    public Analise(Date data, String descricao) {
-        this.data = data;
-        this.descricao = descricao;
+        return analisesNoPeriodo;
     }
 
-    public Date getData() {
-        return data;
-    }
+    class Analise {
+        Date data;
+        String descricao;
 
-    public String getDescricao() {
-        return descricao;
+        public Analise(Date data, String descricao) {
+            this.data = data;
+            this.descricao = descricao;
+        }
+
+        public Date getData() {
+            return data;
+        }
+
+        public String getDescricao() {
+            return descricao;
+        }
     }
 }
