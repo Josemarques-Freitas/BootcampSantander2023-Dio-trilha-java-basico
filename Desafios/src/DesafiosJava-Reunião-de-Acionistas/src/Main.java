@@ -42,7 +42,8 @@ class SistemaAcionistas {
         for (Analise analise : analises) {
             Date dataAnalise = analise.getData();
 
-            if (dataAnalise.equals(dataInicial) || dataAnalise.after(dataInicial) && dataAnalise.before(dataFinal)) {
+            if (dataAnalise.equals(dataInicial) || dataAnalise.after(dataInicial) && dataAnalise.before(dataFinal)
+                    || dataAnalise.equals(dataFinal)) {
                 analisesNoPeriodo.add(analise.getDescricao());
             }
         }
